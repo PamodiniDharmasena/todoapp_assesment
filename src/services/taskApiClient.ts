@@ -6,7 +6,7 @@ class TaskApiClient {
   private baseURL: string;
 
   constructor() {
-    this.baseURL = import.meta.env.API_BASE_URL || 'http://localhost:44387/api';
+    this.baseURL = 'https://localhost:44387/api/v1';
 
     this.client = axios.create({
       baseURL: this.baseURL,
@@ -18,7 +18,7 @@ class TaskApiClient {
 
     async getRecentTasks(count: number = 5): Promise<Task[]> {
     try {
-      const response = await this.client.get<Task[]>('/tasks', {
+      const response = await this.client.get<Task[]>('/Tasks/GetRecentTasks', {
         params: { count },
       });
       return response.data;
