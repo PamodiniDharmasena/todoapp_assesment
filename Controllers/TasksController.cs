@@ -69,4 +69,40 @@ public class TasksController : ControllerBase
             return StatusCode(500, new { error = ex.Message });
         }
     }
+
+    [HttpPut("{id}")]
+    public async Task<ActionResult<TaskDto>> UpdateTask(Guid id, [FromBody] UpdateTaskDto updateTaskDto)
+    {
+        try
+        {
+            var task = await _taskService.UpdateTaskAsync(id, updateTaskDto);
+            return Ok(task);
+        }
+        catch (KeyNotFoundException ex)
+        {
+            return NotFound(new { error = ex.Message });
+        }
+        catch (Exception ex)
+        {
+            return StatusCode(500, new { error = ex.Message });
+        }
+    }
+
+    [HttpPost("{id}/complete")]
+    public async Task<ActionResult<TaskDto>> CompleteTask(Guid id)
+    {
+        try
+        {
+            var task = await _taskService.MarkTaskAsCompletedAsync(id);
+            return Ok(task);
+        }
+        catch (KeyNotFoundException ex)
+        {
+            return NotFound(new { error = ex.Message });
+        }
+        catch (Exception ex)
+        {
+            return StatusCode(500, new { error = ex.Message });
+        }
+    }
 }

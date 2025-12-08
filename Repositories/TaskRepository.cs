@@ -40,4 +40,11 @@ public class TaskRepository : ITaskRepository
     {
         await _context.SaveChangesAsync();
     }
+
+    public async System.Threading.Tasks.Task<Models.Task> UpdateTaskAsync(Models.Task task)
+    {
+        task.UpdatedAt = DateTime.UtcNow;
+        _context.Tasks.Update(task);
+        return await System.Threading.Tasks.Task.FromResult(task);
+    }
 }

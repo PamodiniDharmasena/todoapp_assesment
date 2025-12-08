@@ -8,5 +8,9 @@ namespace todoapp_backend.ITaskServices
         Task<TaskDto?> GetTaskByIdAsync(Guid id);
 
         Task<TaskDto> CreateTaskAsync(CreateTaskDto createTaskDto);
+
+        Task<TaskDto> UpdateTaskAsync(Guid id, UpdateTaskDto updateTaskDto);
+
+        Task<TaskDto> MarkTaskAsCompletedAsync(Guid id);
     }
 }

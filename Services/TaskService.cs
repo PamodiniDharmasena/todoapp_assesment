@@ -49,6 +49,32 @@ public class TaskService : ITaskService
         return MapToDto(task);
     }
 
+    public async Task<TaskDto> UpdateTaskAsync(Guid id, UpdateTaskDto updateTaskDto)
+    {
+        var task = await _taskRepository.GetTaskByIdAsync(id);
+        if (task == null)
+            throw new KeyNotFoundException($"Task with id {id} not found");
+
+        if (updateTaskDto.Title != null)
+            task.Title = updateTaskDto.Title.Trim();
+
+        if (updateTaskDto.Description != null)
+            task.Description = updateTaskDto.Description.Trim();
+
+        if (updateTaskDto.IsCompleted.HasValue)
+            task.IsCompleted = updateTaskDto.IsCompleted.Value;
+
+        await _taskRepository.UpdateTaskAsync(task);
+        await _taskRepository.SaveAsync();
+
+        return MapToDto(task);
+    }
+
+    public async Task<TaskDto> MarkTaskAsCompletedAsync(Guid id)
+    {
+        return await UpdateTaskAsync(id, new UpdateTaskDto { IsCompleted = true });
+    }
+
     private static TaskDto MapToDto(Models.Task task)
     {
         return new TaskDto

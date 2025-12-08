@@ -11,4 +11,6 @@ public interface ITaskRepository
     System.Threading.Tasks.Task<Models.Task> CreateTaskAsync(Models.Task task);
 
     System.Threading.Tasks.Task SaveAsync();
+
+    System.Threading.Tasks.Task<Models.Task> UpdateTaskAsync(Models.Task task);
 }
