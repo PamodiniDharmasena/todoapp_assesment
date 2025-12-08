@@ -22,6 +22,33 @@ public class TaskService : ITaskService
         return tasks.Select(MapToDto);
     }
 
+    public async Task<TaskDto?> GetTaskByIdAsync(Guid id)
+    {
+        var task = await _taskRepository.GetTaskByIdAsync(id);
+        return task == null ? null : MapToDto(task);
+    }
+
+    public async Task<TaskDto> CreateTaskAsync(CreateTaskDto createTaskDto)
+    {
+        if (string.IsNullOrWhiteSpace(createTaskDto.Title))
+            throw new ArgumentException("Title cannot be empty");
+
+        if (string.IsNullOrWhiteSpace(createTaskDto.Description))
+            throw new ArgumentException("Description cannot be empty");
+
+        var task = new Models.Task
+        {
+            Title = createTaskDto.Title.Trim(),
+            Description = createTaskDto.Description.Trim(),
+            IsCompleted = false
+        };
+
+        await _taskRepository.CreateTaskAsync(task);
+        await _taskRepository.SaveAsync();
+
+        return MapToDto(task);
+    }
+
     private static TaskDto MapToDto(Models.Task task)
     {
         return new TaskDto

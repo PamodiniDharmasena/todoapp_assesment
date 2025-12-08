@@ -3,18 +3,6 @@
   "WorkspaceRootPath": "C:\\assesment\\todoapp_assesment\\backend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EC0478E5-7A85-41D7-83B4-A24F05B13F24}|todoapp_backend.csproj|c:\\assesment\\todoapp_assesment\\backend\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{EC0478E5-7A85-41D7-83B4-A24F05B13F24}|todoapp_backend.csproj|solutionrelative:.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EC0478E5-7A85-41D7-83B4-A24F05B13F24}|todoapp_backend.csproj|c:\\assesment\\todoapp_assesment\\backend\\controllers\\taskscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EC0478E5-7A85-41D7-83B4-A24F05B13F24}|todoapp_backend.csproj|solutionrelative:controllers\\taskscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EC0478E5-7A85-41D7-83B4-A24F05B13F24}|todoapp_backend.csproj|c:\\assesment\\todoapp_assesment\\backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EC0478E5-7A85-41D7-83B4-A24F05B13F24}|todoapp_backend.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{EC0478E5-7A85-41D7-83B4-A24F05B13F24}|todoapp_backend.csproj|c:\\assesment\\todoapp_assesment\\backend\\dtos\\taskdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EC0478E5-7A85-41D7-83B4-A24F05B13F24}|todoapp_backend.csproj|solutionrelative:dtos\\taskdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -35,6 +23,14 @@
       "RelativeMoniker": "D:0:0:{EC0478E5-7A85-41D7-83B4-A24F05B13F24}|todoapp_backend.csproj|solutionrelative:services\\itaskservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{EC0478E5-7A85-41D7-83B4-A24F05B13F24}|todoapp_backend.csproj|c:\\assesment\\todoapp_assesment\\backend\\controllers\\taskscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC0478E5-7A85-41D7-83B4-A24F05B13F24}|todoapp_backend.csproj|solutionrelative:controllers\\taskscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC0478E5-7A85-41D7-83B4-A24F05B13F24}|todoapp_backend.csproj|c:\\assesment\\todoapp_assesment\\backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC0478E5-7A85-41D7-83B4-A24F05B13F24}|todoapp_backend.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{EC0478E5-7A85-41D7-83B4-A24F05B13F24}|todoapp_backend.csproj|c:\\assesment\\todoapp_assesment\\backend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{EC0478E5-7A85-41D7-83B4-A24F05B13F24}|todoapp_backend.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
@@ -53,10 +49,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{EC0478E5-7A85-41D7-83B4-A24F05B13F24}|todoapp_backend.csproj|c:\\assesment\\todoapp_assesment\\backend\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{EC0478E5-7A85-41D7-83B4-A24F05B13F24}|todoapp_backend.csproj|solutionrelative:appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EC0478E5-7A85-41D7-83B4-A24F05B13F24}|todoapp_backend.csproj|c:\\assesment\\todoapp_assesment\\backend\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EC0478E5-7A85-41D7-83B4-A24F05B13F24}|todoapp_backend.csproj|solutionrelative:weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -66,24 +58,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": ".gitignore",
-              "DocumentMoniker": "C:\\assesment\\todoapp_assesment\\backend\\.gitignore",
-              "RelativeDocumentMoniker": ".gitignore",
-              "ToolTip": "C:\\assesment\\todoapp_assesment\\backend\\.gitignore",
-              "RelativeToolTip": ".gitignore",
-              "ViewState": "AgIAADwAAAAAAAAAAAAkwFYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-12-08T08:41:01.091Z",
-              "EditorCaption": ""
             },
             {
               "$type": "Bookmark",
@@ -91,31 +70,85 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "WeatherForecast.cs",
-              "DocumentMoniker": "C:\\assesment\\todoapp_assesment\\backend\\WeatherForecast.cs",
-              "RelativeDocumentMoniker": "WeatherForecast.cs",
-              "ToolTip": "C:\\assesment\\todoapp_assesment\\backend\\WeatherForecast.cs",
-              "RelativeToolTip": "WeatherForecast.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "TaskService.cs",
+              "DocumentMoniker": "C:\\assesment\\todoapp_assesment\\backend\\Services\\TaskService.cs",
+              "RelativeDocumentMoniker": "Services\\TaskService.cs",
+              "ToolTip": "C:\\assesment\\todoapp_assesment\\backend\\Services\\TaskService.cs",
+              "RelativeToolTip": "Services\\TaskService.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAUwDEAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-08T08:34:11.029Z"
+              "WhenOpened": "2025-12-08T07:09:54.653Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 2,
+              "Title": "TaskRepository.cs",
+              "DocumentMoniker": "C:\\assesment\\todoapp_assesment\\backend\\Repositories\\TaskRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\TaskRepository.cs",
+              "ToolTip": "C:\\assesment\\todoapp_assesment\\backend\\Repositories\\TaskRepository.cs",
+              "RelativeToolTip": "Repositories\\TaskRepository.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAzwCYAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-08T07:22:57.586Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TaskDtos.cs",
+              "DocumentMoniker": "C:\\assesment\\todoapp_assesment\\backend\\DTOs\\TaskDtos.cs",
+              "RelativeDocumentMoniker": "DTOs\\TaskDtos.cs",
+              "ToolTip": "C:\\assesment\\todoapp_assesment\\backend\\DTOs\\TaskDtos.cs",
+              "RelativeToolTip": "DTOs\\TaskDtos.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-08T07:06:56.688Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ITaskRepository.cs",
+              "DocumentMoniker": "C:\\assesment\\todoapp_assesment\\backend\\Repositories\\ITaskRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\ITaskRepository.cs",
+              "ToolTip": "C:\\assesment\\todoapp_assesment\\backend\\Repositories\\ITaskRepository.cs",
+              "RelativeToolTip": "Repositories\\ITaskRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAwAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-08T07:20:07.473Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "ITaskService.cs",
               "DocumentMoniker": "C:\\assesment\\todoapp_assesment\\backend\\Services\\ITaskService.cs",
               "RelativeDocumentMoniker": "Services\\ITaskService.cs",
               "ToolTip": "C:\\assesment\\todoapp_assesment\\backend\\Services\\ITaskService.cs",
               "RelativeToolTip": "Services\\ITaskService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAYAAAAoAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAkAAABDAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-08T07:51:43.833Z"
+              "WhenOpened": "2025-12-08T07:51:43.833Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
+              "Title": "TasksController.cs",
+              "DocumentMoniker": "C:\\assesment\\todoapp_assesment\\backend\\Controllers\\TasksController.cs",
+              "RelativeDocumentMoniker": "Controllers\\TasksController.cs",
+              "ToolTip": "C:\\assesment\\todoapp_assesment\\backend\\Controllers\\TasksController.cs",
+              "RelativeToolTip": "Controllers\\TasksController.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAcwEYAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-08T07:01:57.976Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\assesment\\todoapp_assesment\\backend\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -127,56 +160,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "TaskRepository.cs",
-              "DocumentMoniker": "C:\\assesment\\todoapp_assesment\\backend\\Repositories\\TaskRepository.cs",
-              "RelativeDocumentMoniker": "Repositories\\TaskRepository.cs",
-              "ToolTip": "C:\\assesment\\todoapp_assesment\\backend\\Repositories\\TaskRepository.cs",
-              "RelativeToolTip": "Repositories\\TaskRepository.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAADgvw4AAABHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-08T07:22:57.586Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "TaskService.cs",
-              "DocumentMoniker": "C:\\assesment\\todoapp_assesment\\backend\\Services\\TaskService.cs",
-              "RelativeDocumentMoniker": "Services\\TaskService.cs",
-              "ToolTip": "C:\\assesment\\todoapp_assesment\\backend\\Services\\TaskService.cs",
-              "RelativeToolTip": "Services\\TaskService.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAAwBgAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-08T07:09:54.653Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "TasksController.cs",
-              "DocumentMoniker": "C:\\assesment\\todoapp_assesment\\backend\\Controllers\\TasksController.cs",
-              "RelativeDocumentMoniker": "Controllers\\TasksController.cs",
-              "ToolTip": "C:\\assesment\\todoapp_assesment\\backend\\Controllers\\TasksController.cs",
-              "RelativeToolTip": "Controllers\\TasksController.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABgAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-08T07:01:57.976Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "TaskDtos.cs",
-              "DocumentMoniker": "C:\\assesment\\todoapp_assesment\\backend\\DTOs\\TaskDtos.cs",
-              "RelativeDocumentMoniker": "DTOs\\TaskDtos.cs",
-              "ToolTip": "C:\\assesment\\todoapp_assesment\\backend\\DTOs\\TaskDtos.cs",
-              "RelativeToolTip": "DTOs\\TaskDtos.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-08T07:06:56.688Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 7,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\assesment\\todoapp_assesment\\backend\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
@@ -188,19 +172,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ITaskRepository.cs",
-              "DocumentMoniker": "C:\\assesment\\todoapp_assesment\\backend\\Repositories\\ITaskRepository.cs",
-              "RelativeDocumentMoniker": "Repositories\\ITaskRepository.cs",
-              "ToolTip": "C:\\assesment\\todoapp_assesment\\backend\\Repositories\\ITaskRepository.cs",
-              "RelativeToolTip": "Repositories\\ITaskRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAYAAABGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-08T07:20:07.473Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 8,
               "Title": "TodoDbContext.cs",
               "DocumentMoniker": "C:\\assesment\\todoapp_assesment\\backend\\Data\\TodoDbContext.cs",
               "RelativeDocumentMoniker": "Data\\TodoDbContext.cs",
@@ -212,7 +184,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 9,
               "Title": "Task.cs",
               "DocumentMoniker": "C:\\assesment\\todoapp_assesment\\backend\\Models\\Task.cs",
               "RelativeDocumentMoniker": "Models\\Task.cs",
@@ -224,7 +196,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 10,
               "Title": "todoapp_backend.csproj",
               "DocumentMoniker": "C:\\assesment\\todoapp_assesment\\backend\\todoapp_backend.csproj",
               "RelativeDocumentMoniker": "todoapp_backend.csproj",
@@ -236,7 +208,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 11,
               "Title": "appsettings.Development.json",
               "DocumentMoniker": "C:\\assesment\\todoapp_assesment\\backend\\appsettings.Development.json",
               "RelativeDocumentMoniker": "appsettings.Development.json",

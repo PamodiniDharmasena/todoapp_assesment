@@ -30,5 +30,43 @@ public class TasksController : ControllerBase
         {
             return StatusCode(500, new { error = ex.Message });
         }
-    }    
+    }
+
+    [HttpGet("{id}")]
+    public async Task<ActionResult<TaskDto>> GetTaskById(Guid id)
+    {
+        try
+        {
+            var task = await _taskService.GetTaskByIdAsync(id);
+            if (task == null)
+                return NotFound(new { error = $"Task with id {id} not found" });
+
+            return Ok(task);
+        }
+        catch (Exception ex)
+        {
+            return StatusCode(500, new { error = ex.Message });
+        }
+    }
+
+    [HttpPost]
+    public async Task<ActionResult<TaskDto>> CreateTask([FromBody] CreateTaskDto createTaskDto)
+    {
+        try
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            var task = await _taskService.CreateTaskAsync(createTaskDto);
+            return CreatedAtAction(nameof(GetTaskById), new { id = task.Id }, task);
+        }
+        catch (ArgumentException ex)
+        {
+            return BadRequest(new { error = ex.Message });
+        }
+        catch (Exception ex)
+        {
+            return StatusCode(500, new { error = ex.Message });
+        }
+    }
 }

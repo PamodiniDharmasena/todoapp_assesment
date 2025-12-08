@@ -20,4 +20,24 @@ public class TaskRepository : ITaskRepository
             .Take(count)
             .ToListAsync();
     }
+
+    public async System.Threading.Tasks.Task<Models.Task?> GetTaskByIdAsync(Guid id)
+    {
+        return await _context.Tasks.FindAsync(id);
+    }
+
+    public async System.Threading.Tasks.Task<Models.Task> CreateTaskAsync(Models.Task task)
+    {
+        task.Id = Guid.NewGuid();
+        task.CreatedAt = DateTime.UtcNow;
+        task.UpdatedAt = DateTime.UtcNow;
+
+        await _context.Tasks.AddAsync(task);
+        return task;
+    }
+
+    public async System.Threading.Tasks.Task SaveAsync()
+    {
+        await _context.SaveChangesAsync();
+    }
 }
