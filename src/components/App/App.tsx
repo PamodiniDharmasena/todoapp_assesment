@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import { TaskForm } from '../TaskForm/TaskForm';
+import { TaskCard } from '../TaskCard/TaskCard';
+import type { Task } from '../../types/task';
+import { TaskList } from '../TaskList/TaskList';
 
 function App() {
  
+ const [tasks, setTasks] = useState<Task[]>([]);
   return (
     
     <div className="app">
@@ -14,6 +18,9 @@ function App() {
       
       <section>
         <TaskForm />
+      </section>
+      <section>
+       <TaskList tasks={tasks} onTaskComplete={async (id: string) => {}} />
       </section>
 
 
