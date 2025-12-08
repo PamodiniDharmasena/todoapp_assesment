@@ -10,7 +10,12 @@ interface TaskCardProps {
 
 
 export const TaskCard: React.FC<TaskCardProps> = ({ task, onComplete, isLoading = false }) => {
-  const handleComplete = async () => {    
+  const handleComplete = async () => {  
+      try {
+      await onComplete(task.id);
+    } catch (error) {
+      console.error('Error completing task:', error);
+    }
   };
 
   const formattedDate = new Date(task.createdAt).toLocaleDateString('en-US', {

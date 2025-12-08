@@ -5,3 +5,8 @@ export interface Task {
   isCompleted: boolean;
   createdAt: string;
 }
+
+export interface CreateTaskDto {
+  title: string;
+  description: string;
+}

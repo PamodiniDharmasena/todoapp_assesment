@@ -1,5 +1,5 @@
 import axios, { type AxiosInstance } from 'axios';
-import type { Task } from '../types/task';
+import type { CreateTaskDto, Task } from '../types/task';
 
 class TaskApiClient {
   private client: AxiosInstance;
@@ -27,6 +27,26 @@ class TaskApiClient {
       throw error;
     }
   }  
+
+  async createTask(createTaskDto: CreateTaskDto): Promise<Task> {
+    try {
+      const response = await this.client.post<Task>('/Tasks/CreateTask', createTaskDto);
+      return response.data;
+    } catch (error) {
+      console.error('Error creating task:', error);
+      throw error;
+    }
+  }
+
+  async completeTask(id: string): Promise<Task> {
+    try {
+      const response = await this.client.post<Task>(`/Tasks/CompleteTask/${id}/complete`);
+      return response.data;
+    } catch (error) {
+      console.error(`Error completing task ${id}:`, error);
+      throw error;
+    }
+  }
 }
 
 export const taskApiClient = new TaskApiClient();

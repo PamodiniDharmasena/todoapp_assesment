@@ -1,16 +1,42 @@
-import React, { useState, type FormEvent } from 'react';
+import React, { useState } from 'react';
 import './TaskForm.css';
 
-export const TaskForm = () => {
-    const [title, setTitle] = useState('');
-    const [description, setDescription] = useState('');
-    const [isLoading, setIsLoading] = useState(false);
-    const [error, setError] = useState<string | null>(null);
+interface TaskFormProps {
+  onSubmit: (title: string, description: string) => Promise<void>;
+  isLoading?: boolean;
+}
 
+/**
+ * Component for creating new tasks
+ */
+export const TaskForm: React.FC<TaskFormProps> = ({ onSubmit, isLoading = false }) => {
+  const [title, setTitle] = useState('');
+  const [description, setDescription] = useState('');
+  const [error, setError] = useState('');
 
-    function handleSubmit(event: FormEvent<HTMLFormElement>): void {
-        throw new Error('Function not implemented.');
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setError('');
+
+    if (!title.trim()) {
+      setError('Title is required');
+      return;
     }
+
+    if (!description.trim()) {
+      setError('Description is required');
+      return;
+    }
+
+    try {
+      await onSubmit(title, description);
+      setTitle('');
+      setDescription('');
+    } catch (err) {
+      setError('Failed to create task. Please try again.');
+      console.error(err);
+    }
+  };
 
   return (
     <form className="task-form" onSubmit={handleSubmit}>
