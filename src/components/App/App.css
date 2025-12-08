@@ -46,8 +46,25 @@ body {
 }
 
 .container {
-  max-width: 800px;
+  max-width: 1200px;
   margin: 0 auto;
+}
+
+.content-wrapper {
+  display: flex;
+  gap: 2rem;
+  height: 100%;
+}
+
+.form-section {
+  flex: 0 0 35%;
+  margin-bottom: 0;
+}
+
+.list-section {
+  flex: 1;
+  margin-bottom: 0;
+  min-width: 0;
 }
 
 .error-banner {
@@ -81,14 +98,6 @@ body {
   opacity: 0.7;
 }
 
-.form-section {
-  margin-bottom: 2rem;
-}
-
-.list-section {
-  margin-bottom: 2rem;
-}
-
 .app-footer {
   background-color: rgba(0, 0, 0, 0.1);
   color: white;
@@ -114,5 +123,13 @@ body {
 
   .container {
     max-width: 100%;
+  }
+
+  .content-wrapper {
+    flex-direction: column;
+  }
+
+  .form-section {
+    flex: 0 0 auto;
   }
 }

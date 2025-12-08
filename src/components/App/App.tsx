@@ -71,13 +71,15 @@ function App() {
             </div>
           )}
 
-          <section className="form-section">
-            <TaskForm onSubmit={handleCreateTask} isLoading={loading} />
-          </section>
+          <div className="content-wrapper">
+            <section className="form-section">
+              <TaskForm onSubmit={handleCreateTask} isLoading={loading} />
+            </section>
 
-          <section className="list-section">
-            <TaskList tasks={tasks} onTaskComplete={handleCompleteTask} isLoading={loading} />
-          </section>
+            <section className="list-section">
+              <TaskList tasks={tasks} onTaskComplete={handleCompleteTask} isLoading={loading} />
+            </section>
+          </div>
         </div>
       </main>
 
