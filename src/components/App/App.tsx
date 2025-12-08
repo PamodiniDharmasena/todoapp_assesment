@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import { TaskForm } from '../TaskForm/TaskForm';
 
 function App() {
  
@@ -11,6 +12,11 @@ function App() {
         <p>Stay organized and get things done</p>
       </header>
       
+      <section>
+        <TaskForm />
+      </section>
+
+
       <footer className="app-footer">
         <p>&copy; 2024 Todo App. Stay productive!</p>
       </footer>
