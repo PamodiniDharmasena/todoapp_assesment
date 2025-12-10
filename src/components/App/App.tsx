@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 import './App.css';
 import type { Task } from '../../types/task';
@@ -23,7 +23,7 @@ function App() {
     setLoading(true);
     setError('');
     try {
-      const fetchedTasks = await taskApiClient.getRecentTasks(5);
+      const fetchedTasks = await taskApiClient.getTasks();
       setTasks(fetchedTasks);
     } catch (err) {
       setError('Failed to load tasks. Please refresh the page.');
@@ -38,11 +38,12 @@ function App() {
       const newTask = await taskApiClient.createTask({ title, description });
       setTasks([newTask, ...tasks.slice(0, 4)]);
     } catch (err) {
+      setError('Failed to create task. Please try again.');
       throw err;
     }
   };
 
-  const handleCompleteTask = async (id: string) => {
+  const handleCompleteTask = async (id: number) => {
     try {
       await taskApiClient.completeTask(id);
       setTasks(tasks.filter((task) => task.id !== id));

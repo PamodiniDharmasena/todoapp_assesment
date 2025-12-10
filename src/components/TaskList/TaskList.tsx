@@ -1,18 +1,18 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './TaskList.css';
 import type { Task } from '../../types/task';
 import { TaskCard } from '../TaskCard/TaskCard';
 
 interface TaskListProps {
   tasks: Task[];
-  onTaskComplete: (id: string) => Promise<void>;
+  onTaskComplete: (id: number) => Promise<void>;
   isLoading?: boolean;
 }
 
 export const TaskList: React.FC<TaskListProps> = ({ tasks, onTaskComplete, isLoading = false }) => {
-  const [completingTaskId, setCompletingTaskId] = useState<string | null>(null);
+  const [completingTaskId, setCompletingTaskId] = useState<number | null>(null);
 
-  const handleComplete = async (id: string) => {
+  const handleComplete = async (id: number) => {
     setCompletingTaskId(id);
     try {
       await onTaskComplete(id);

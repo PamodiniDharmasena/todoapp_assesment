@@ -4,14 +4,13 @@ import type { Task } from '../../types/task';
 
 interface TaskCardProps {
   task: Task;
-  onComplete: (id: string) => Promise<void>;
+  onComplete: (id: number) => Promise<void>;
   isLoading?: boolean;
 }
 
-
 export const TaskCard: React.FC<TaskCardProps> = ({ task, onComplete, isLoading = false }) => {
-  const handleComplete = async () => {  
-      try {
+  const handleComplete = async () => {
+    try {
       await onComplete(task.id);
     } catch (error) {
       console.error('Error completing task:', error);
@@ -32,7 +31,7 @@ export const TaskCard: React.FC<TaskCardProps> = ({ task, onComplete, isLoading 
         <h3 className="task-title">{task.title}</h3>
         <span className="task-date">{formattedDate}</span>
       </div>
-      <p className="task-description">{task.description}</p>
+      {task.description && <p className="task-description">{task.description}</p>}
       <div className="task-actions">
         <button
           className="done-btn"

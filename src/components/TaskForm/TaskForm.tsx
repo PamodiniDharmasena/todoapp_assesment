@@ -23,11 +23,6 @@ export const TaskForm: React.FC<TaskFormProps> = ({ onSubmit, isLoading = false 
       return;
     }
 
-    if (!description.trim()) {
-      setError('Description is required');
-      return;
-    }
-
     try {
       await onSubmit(title, description);
       setTitle('');
@@ -57,7 +52,7 @@ export const TaskForm: React.FC<TaskFormProps> = ({ onSubmit, isLoading = false 
         <label htmlFor="description">Description</label>
         <textarea
           id="description"
-          placeholder="Enter task description"
+          placeholder="Enter task description (optional)"
           value={description}
           onChange={(e) => setDescription(e.target.value)}
           disabled={isLoading}
