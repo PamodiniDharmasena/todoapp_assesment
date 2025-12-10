@@ -11,12 +11,29 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 
+// Add CORS policy
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll", builder =>
+    {
+        builder.AllowAnyOrigin()
+               .AllowAnyMethod()
+               .AllowAnyHeader();
+    });
+});
+
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 
 if (!string.IsNullOrEmpty(connectionString))
 {
     builder.Services.AddDbContext<TodoDbContext>(options =>
-        options.UseSqlServer(connectionString));
+        options.UseSqlServer(connectionString, sqlOptions => 
+        {
+            sqlOptions.EnableRetryOnFailure(
+                maxRetryCount: 5,
+                maxRetryDelaySeconds: 30,
+                errorNumbersToAdd: null);
+        }));
 }
 
 // Register services and repositories
@@ -29,14 +46,39 @@ builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
+// Auto-run migrations on startup
+try
+{
+    using (var scope = app.Services.CreateScope())
+    {
+        var dbContext = scope.ServiceProvider.GetRequiredService<TodoDbContext>();
+        // Apply migrations
+        await dbContext.Database.MigrateAsync();
+        Console.WriteLine("✓ Database migrations applied successfully");
+    }
+}
+catch (Exception ex)
+{
+    Console.WriteLine($"✗ Database initialization failed: {ex.Message}");
+}
+
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+else
+{
+    // Enable Swagger in Production for Docker
+    app.UseSwagger();
+    app.UseSwaggerUI();
+}
 
-app.UseHttpsRedirection();
+// Don't redirect to HTTPS in Docker
+// app.UseHttpsRedirection();
+
+app.UseCors("AllowAll");
 
 app.UseAuthorization();
 

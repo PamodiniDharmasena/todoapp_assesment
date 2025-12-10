@@ -27,11 +27,7 @@ RUN apt-get update && apt-get install -y curl && rm -rf /var/lib/apt/lists/*
 
 COPY --from=publish /app/publish .
 
-# Copy entrypoint script
-COPY entrypoint.sh .
-RUN chmod +x entrypoint.sh
-
 EXPOSE 8080
 EXPOSE 8081
 
-ENTRYPOINT ["./entrypoint.sh"]
+CMD ["dotnet", "todoapp_backend.dll"]
