@@ -31,7 +31,7 @@ if (!string.IsNullOrEmpty(connectionString))
         {
             sqlOptions.EnableRetryOnFailure(
                 maxRetryCount: 5,
-                maxRetryDelaySeconds: 30,
+                maxRetryDelay: TimeSpan.FromSeconds(30),
                 errorNumbersToAdd: null);
         }));
 }
