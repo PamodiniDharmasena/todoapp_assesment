@@ -21,6 +21,13 @@ docker compose up -d
 
 This will start all the required containers in detached mode (running in the background).
 
+## Access the Application
+
+Once the containers are running, you can access the application at:
+
+- **Frontend:** [http://localhost](http://localhost)
+- **Backend API Documentation:** [http://localhost:5000/swagger/index.html](http://localhost:5000/swagger/index.html)
+
 ## Useful Commands
 
 ### Check container status
