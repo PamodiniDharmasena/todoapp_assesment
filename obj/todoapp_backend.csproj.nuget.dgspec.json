@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\assesment\\todoapp_assesment\\backend\\todoapp_backend.csproj": {}
+    "D:\\bakcend testing viraj\\wee\\todoapp_backend.csproj": {}
   },
   "projects": {
-    "C:\\assesment\\todoapp_assesment\\backend\\todoapp_backend.csproj": {
+    "D:\\bakcend testing viraj\\wee\\todoapp_backend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\assesment\\todoapp_assesment\\backend\\todoapp_backend.csproj",
+        "projectUniqueName": "D:\\bakcend testing viraj\\wee\\todoapp_backend.csproj",
         "projectName": "todoapp_backend",
-        "projectPath": "C:\\assesment\\todoapp_assesment\\backend\\todoapp_backend.csproj",
+        "projectPath": "D:\\bakcend testing viraj\\wee\\todoapp_backend.csproj",
         "packagesPath": "C:\\Users\\kavin\\.nuget\\packages\\",
-        "outputPath": "C:\\assesment\\todoapp_assesment\\backend\\obj\\",
+        "outputPath": "D:\\bakcend testing viraj\\wee\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
