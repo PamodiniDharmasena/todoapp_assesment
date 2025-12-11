@@ -7,7 +7,8 @@ class TaskApiClient {
 
   constructor() {
     // Use /api for Docker (proxied by nginx) or environment variable
-    this.baseURL = 'http://localhost:5000/api/v1';
+    this.baseURL = import.meta.env.VITE_API_BASE_URL //|| 'http://localhost:5000/api/v1';
+    console.log('API Base URL:', this.baseURL);
 
     this.client = axios.create({
       baseURL: this.baseURL,
@@ -19,7 +20,8 @@ class TaskApiClient {
 
     async getRecentTasks(count: number = 5): Promise<Task[]> {
     try {
-      const response = await this.client.get<Task[]>('/tasks/GetRecentTasks', {
+      const endpoint = import.meta.env.VITE_GET_RECENT_TASKS_ENDPOINT || '/tasks/GetRecentTasks';
+      const response = await this.client.get<Task[]>(endpoint, {
         params: { count },
       });
       return response.data;
@@ -31,7 +33,8 @@ class TaskApiClient {
 
   async createTask(createTaskDto: CreateTaskDto): Promise<Task> {
     try {
-      const response = await this.client.post<Task>('/tasks/CreateTask', createTaskDto);
+      const endpoint = import.meta.env.VITE_CREATE_TASK_ENDPOINT; //|| '/tasks/CreateTask';
+      const response = await this.client.post<Task>(endpoint, createTaskDto);
       return response.data;
     } catch (error) {
       console.error('Error creating task:', error);
@@ -41,7 +44,8 @@ class TaskApiClient {
 
   async completeTask(id: string): Promise<Task> {
     try {
-      const response = await this.client.post<Task>(`/tasks/CompleteTask/${id}/complete`);
+      const endpoint = import.meta.env.VITE_COMPLETE_TASK_ENDPOINT || '/tasks/CompleteTask';
+      const response = await this.client.post<Task>(`${endpoint}/${id}/complete`);
       return response.data;
     } catch (error) {
       console.error(`Error completing task ${id}:`, error);
