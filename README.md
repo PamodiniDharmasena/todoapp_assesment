@@ -9,9 +9,9 @@ Before running this project, ensure you have the following installed:
 
 ## Getting Started
 
-### 1. Checkout the "dockarize" branch
+### 1. Checkout the "dockerize" branch
 ```bash
-git checkout dockarize
+git checkout dockerize
 ```
 
 ### 2. Run Docker Compose
